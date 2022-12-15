@@ -49,12 +49,12 @@ ab.addEventListener("click", (ev) => {
     console.log("登録ボタンが押された")
     const drp = document.getElementById("#dragDropArea")
     console.log(drp)
-    console.log(fileInput.files[0]["name"]);
+    console.log(fileInput.files[0]['name']);
 
-    fetch("/toppage",{
+    fetch("/upload",{
         method:'POST',
     }).then((response) => {
-
+        console.log(response);
     });
 })
 
