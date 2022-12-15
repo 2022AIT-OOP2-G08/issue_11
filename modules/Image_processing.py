@@ -1,7 +1,7 @@
 import cv2
 
 face_cascade_path = 'haarcascade_frontalface_default.xml'
-
+#入力画像と出力画像を選択どこに保存するか場所を指定して使用可能
 def face_cascade(input_img, output_img):
     face_cascade = cv2.CascadeClassifier(face_cascade_path)
     src = cv2.imread(input_img)
@@ -16,7 +16,7 @@ def face_cascade(input_img, output_img):
         
         
 
-        
+    #画像の出力場所の指定
     cv2.imwrite(output_img, src)
 
 #debug
