@@ -1,6 +1,7 @@
 # ファイル変更イベント検出のため、watchdogをインポート
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
+import grayscale
 
 # ファイルアクセスとスリープのため、osとtimeをインポート
 import os
@@ -16,6 +17,8 @@ class FileChangeHandler(FileSystemEventHandler):
          filepath = event.src_path
          filename = os.path.basename(filepath)
          print('%s created' % filename)
+         grayscale.gray_scale(filename)
+        #  ここに関数並べる
 
 
     #  # ファイル変更時のイベント
