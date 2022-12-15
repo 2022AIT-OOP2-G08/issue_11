@@ -31,9 +31,9 @@ def proccess(filename: str):
     mosaic = cv2.resize(reduc,(w,h))
     src_img[y:y+h, x:x+w]=mosaic
 
-    cv2.imwrite('mosaic_face.jpg', src_img)
+    cv2.imwrite('output_img.jpg', src_img)
     
 if __name__=='__main__':
-    input_file = ''
-    proccess(input_file)
+    input_img = ''
+    proccess(input_img)
 
