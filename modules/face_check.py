@@ -2,9 +2,9 @@ import cv2
 
 face_cascade_path = 'haarcascade_frontalface_default.xml'
 
-def face_cascade(photo):
+def face_cascade(input, output):
     face_cascade = cv2.CascadeClassifier(face_cascade_path)
-    src = cv2.imread(photo)
+    src = cv2.imread(input)
 
     src_gray = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY)
 
@@ -17,10 +17,11 @@ def face_cascade(photo):
         
 
         
-    cv2.imwrite('output/output.jpg', src)
+    cv2.imwrite(output, src)
 
-#debug
+#debug用コード
 if __name__ == "__main__":
     input = 'sample.jpg'
-    face_cascade(input)
+    output = '/Users/k21013/Oop/Oop2/No.11/issue_11/images/face_check/output.jpg'
+    face_cascade(input,output)
     #'/Users/k21013/Oop/Oop2/No.11/issue_11/images/face_check/output.jpg'
