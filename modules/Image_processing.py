@@ -34,6 +34,6 @@ def proccess(filename: str):
     cv2.imwrite('output_img.jpg', src_img)
     
 if __name__=='__main__':
-    input_img = ''
+    input_img = 'face.jpg'
     proccess(input_img)
 
