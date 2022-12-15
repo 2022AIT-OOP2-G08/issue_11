@@ -1,7 +1,7 @@
 import cv2
 import os
 
-def proccess(filename: str):
+def mosaic(filename: str):
 
     face_cascade_path = 'haarcascade_frontalface_default.xml'
     face_cascade = cv2.CascadeClassifier(face_cascade_path)
@@ -31,9 +31,12 @@ def proccess(filename: str):
     mosaic = cv2.resize(reduc,(w,h))
     src_img[y:y+h, x:x+w]=mosaic
 
-    cv2.imwrite('output_img.jpg', src_img)
-    
+    cv2.imwrite('/issue_11/images/mosaic/output_img.jpg', src_img)
+    filepath = "output_img.jpg"
+    print("カレントパス", os.getcwd())
+    print("filepath が指す絶対パス", os.path.abspath(filepath))
+    print("ファイルが存在するかどうか", os.path.isfile(filepath))
 if __name__=='__main__':
     input_img = 'face.jpg'
-    proccess(input_img)
+    mosaic(input_img)
 
