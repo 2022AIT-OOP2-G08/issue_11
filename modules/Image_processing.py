@@ -19,7 +19,7 @@ def face_cascade(input_img, output_img):
     #画像の出力場所の指定
     cv2.imwrite(output_img, src)
 
-#debug
+#debug 使用する画像と保存先を指定してください。
 if __name__ == "__main__":
     input = 'sample.jpg'
     face_cascade(input,'/Users/k21013/Oop/Oop2/No.11/issue_11/images/face_check/output.jpg')
