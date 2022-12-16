@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>輪郭抽出された画像</title>
+</head>
+<body>
+  <main>
+    <h1>輪郭抽出された画像</h1>
+        <div>
+            {% for file in target_files %}
+            <div>
+                <img src="{{ file['url'] }}" alt="{{ file['filename'] }}">
+                <p>{{ file["filename"] }}</p>
+            </div>
+            {% endfor %}
+        </div>
+  </main>
+</body>
+</html>

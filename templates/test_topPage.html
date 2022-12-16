@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>テストトップページ</title>
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='janken.css') }}"> -->
+</head>
+<body>
+  <main>
+    <form action="/uploaded">
+        <!-- これを押したらformのactionが動く -->
+        <button type="submit">uploaded</button> 
+    </form>
+    <form action="/mosaic">
+        <!-- これを押したらformのactionが動く -->
+        <button type="submit">mosaic</button> 
+    </form>
+    <form action="/frame">
+        <!-- これを押したらformのactionが動く -->
+        <button type="submit">frame</button> 
+    </form>
+    <form action="/outline">
+        <!-- これを押したらformのactionが動く -->
+        <button type="submit">outline</button> 
+    </form>
+    <form action="/grayscale">
+        <!-- これを押したらformのactionが動く -->
+        <button type="submit">grayscale</button> 
+    </form>
+    
+  </main>
+</body>
+</html>
